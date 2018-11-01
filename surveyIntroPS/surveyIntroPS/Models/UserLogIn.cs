@@ -7,29 +7,24 @@ using System.Web;
 
 namespace surveyIntroPS.Models
 {
-    public class UserLogIn
+    public partial class UserLogIn
     {
         [Key]
+        [Index(IsUnique = true)]
         [Required]
-        public string UserName { get; set; }
+        [EmailAddress]
+        public string Email { get; set; }
 
         [Required]
         [StringLength(15, MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-        //protected virtual string PasswordStored
-        //{
-        //    get;
-        //    set;
-        //}
-
-
-        //[NotMapped]
-        //public string Password
-        //{
-        //    get { return Decrypt(PasswordStored); }
-        //    set { PasswordStored = Encrypt(value); }
-        //}
+        
+        
+        [StringLength(15, MinimumLength = 8)]
+        [DataType(DataType.Password)]       
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
     }
 }

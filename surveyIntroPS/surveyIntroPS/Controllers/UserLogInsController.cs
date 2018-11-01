@@ -14,6 +14,12 @@ namespace surveyIntroPS.Controllers
     {
         private Survey db = new Survey();
 
+        public JsonResult IsUserExists(string Email)
+        {
+            //check if any of the UserName matches the UserName specified in the Parameter using the ANY extension method.  
+            return Json(!db.UserLogIns.Any(x => x.Email == Email), JsonRequestBehavior.AllowGet);
+        }
+        
         // GET: UserLogIns
         public ActionResult Index()
         {
@@ -46,7 +52,7 @@ namespace surveyIntroPS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserName,Password")] UserLogIn userLogIn)
+        public ActionResult Create([Bind(Include = "Email,Password,ConfirmPassword")] UserLogIn userLogIn)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +84,7 @@ namespace surveyIntroPS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserName,Password")] UserLogIn userLogIn)
+        public ActionResult Edit([Bind(Include = "Email,Password,ConfirmPassword")] UserLogIn userLogIn)
         {
             if (ModelState.IsValid)
             {

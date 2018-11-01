@@ -18,9 +18,17 @@
             @Html.DisplayFor(model => model.Password)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UserName }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Email }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

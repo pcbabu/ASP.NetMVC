@@ -46,7 +46,7 @@ namespace surveyIntroPS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Email,Address,FirstName,LastName,PhoneNo")] PersonalInfo personalInfo)
+        public ActionResult Create([Bind(Include = "ID,Address,FirstName,LastName,PhoneNo")] PersonalInfo personalInfo)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace surveyIntroPS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Email,Address,FirstName,LastName,PhoneNo")] PersonalInfo personalInfo)
+        public ActionResult Edit([Bind(Include = "ID,Address,FirstName,LastName,PhoneNo")] PersonalInfo personalInfo)
         {
             if (ModelState.IsValid)
             {

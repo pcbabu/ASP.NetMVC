@@ -168,6 +168,7 @@
     <Compile Include="Models\QueInfo.cs" />
     <Compile Include="Models\survey.cs" />
     <Compile Include="Models\UserLogIn.cs" />
+    <Compile Include="Models\UserMetaData .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -210,11 +211,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\UserLogIns\Create.cshtml" />
-    <Content Include="Views\UserLogIns\Delete.cshtml" />
-    <Content Include="Views\UserLogIns\Details.cshtml" />
-    <Content Include="Views\UserLogIns\Edit.cshtml" />
-    <Content Include="Views\UserLogIns\Index.cshtml" />
     <Content Include="Views\QueInfoes\Create.cshtml" />
     <Content Include="Views\QueInfoes\Delete.cshtml" />
     <Content Include="Views\QueInfoes\Details.cshtml" />
@@ -225,16 +221,21 @@
     <Content Include="Views\Ques\Details.cshtml" />
     <Content Include="Views\Ques\Edit.cshtml" />
     <Content Include="Views\Ques\Index.cshtml" />
-    <Content Include="Views\Ans\Create.cshtml" />
-    <Content Include="Views\Ans\Delete.cshtml" />
-    <Content Include="Views\Ans\Details.cshtml" />
-    <Content Include="Views\Ans\Edit.cshtml" />
-    <Content Include="Views\Ans\Index.cshtml" />
     <Content Include="Views\PersonalInfoes\Create.cshtml" />
     <Content Include="Views\PersonalInfoes\Delete.cshtml" />
     <Content Include="Views\PersonalInfoes\Details.cshtml" />
     <Content Include="Views\PersonalInfoes\Edit.cshtml" />
     <Content Include="Views\PersonalInfoes\Index.cshtml" />
+    <Content Include="Views\Ans\Create.cshtml" />
+    <Content Include="Views\Ans\Delete.cshtml" />
+    <Content Include="Views\Ans\Details.cshtml" />
+    <Content Include="Views\Ans\Edit.cshtml" />
+    <Content Include="Views\Ans\Index.cshtml" />
+    <Content Include="Views\UserLogIns\Create.cshtml" />
+    <Content Include="Views\UserLogIns\Delete.cshtml" />
+    <Content Include="Views\UserLogIns\Details.cshtml" />
+    <Content Include="Views\UserLogIns\Edit.cshtml" />
+    <Content Include="Views\UserLogIns\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
