@@ -1,0 +1,63 @@
+﻿@model IEnumerable<surveyIntroPS.Models.Que>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ques)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Op1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Op2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Op3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Op4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ans)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ques)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Op1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Op2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Op3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Op4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ans)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
