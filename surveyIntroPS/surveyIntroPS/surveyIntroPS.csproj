@@ -236,6 +236,7 @@
     <Content Include="Views\UserLogIns\Details.cshtml" />
     <Content Include="Views\UserLogIns\Edit.cshtml" />
     <Content Include="Views\UserLogIns\Index.cshtml" />
+    <Content Include="Views\UserLogIns\loginComplit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

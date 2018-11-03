@@ -12,8 +12,9 @@ namespace surveyIntroPS.Controllers
 {
     public class UserLogInsController : Controller
     {
+        public string mail;
         private Survey db = new Survey();
-
+        PersonalInfoesController PersonalInfoesController = new PersonalInfoesController();
         public JsonResult IsUserExists(string Email)
         {
             //check if any of the UserName matches the UserName specified in the Parameter using the ANY extension method.  
@@ -41,6 +42,11 @@ namespace surveyIntroPS.Controllers
             return View(userLogIn);
         }
 
+        public ActionResult loginComplit(string id)
+        {
+            ViewBag.Message = id;
+            return View();
+        }
         // GET: UserLogIns/Create
         public ActionResult Create()
         {
@@ -58,7 +64,16 @@ namespace surveyIntroPS.Controllers
             {
                 db.UserLogIns.Add(userLogIn);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                mail = userLogIn.Email;
+                return RedirectToAction("Contact",  "Home");
+
+                //return RedirectToAction("loginComplit", "UserLogIns", userLogIn.Email);
+                // PersonalInfoesController.Create();
+                // return RedirectToAction("Index");
+            }
+            else
+            {
+                mail = null;
             }
 
             return View(userLogIn);
