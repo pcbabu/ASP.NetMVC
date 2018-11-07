@@ -1,18 +1,19 @@
-namespace MvcAuth.Migrations
+namespace DataModel.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MvcAuth.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataModel.GroupDB>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            ContextKey = "DataModel.GroupDB";
         }
 
-        protected override void Seed(MvcAuth.Models.ApplicationDbContext context)
+        protected override void Seed(DataModel.GroupDB context)
         {
             //  This method will be called after migrating to the latest version.
 

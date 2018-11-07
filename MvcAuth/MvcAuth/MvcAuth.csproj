@@ -231,6 +231,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GroupModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -311,6 +312,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Info.cshtml" />
+    <Content Include="Views\GroupModels\Create.cshtml" />
+    <Content Include="Views\GroupModels\Delete.cshtml" />
+    <Content Include="Views\GroupModels\Details.cshtml" />
+    <Content Include="Views\GroupModels\Edit.cshtml" />
+    <Content Include="Views\GroupModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -335,6 +341,16 @@
     <EmbeddedResource Include="Migrations\201811030200086_Init1.resx">
       <DependentUpon>201811030200086_Init1.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataControl\DataControl.csproj">
+      <Project>{694150c7-54b5-415b-9c9c-aab3d110a617}</Project>
+      <Name>DataControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{C3AB7DCA-93BA-47AB-BCD3-455FB252A55A}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
