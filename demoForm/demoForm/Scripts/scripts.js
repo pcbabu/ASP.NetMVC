@@ -1,0 +1,2 @@
+﻿$(function () {
+    $("#loaderbody").addClass('hide');
