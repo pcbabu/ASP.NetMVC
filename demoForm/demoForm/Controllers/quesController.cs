@@ -20,6 +20,22 @@ namespace demoForm.Controllers
             return View(db.Ques.ToList());
         }
 
+        public ActionResult createNew()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult createNew(FormCollection collection)
+        {
+            ViewBag.Message = collection;
+            return View();
+        }
+
+        public ActionResult ViewAll()
+        {
+            return View(db.Ques.ToList());
+        }
         // GET: ques/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,9 +52,16 @@ namespace demoForm.Controllers
         }
 
         // GET: ques/Create
-        public ActionResult Create()
+        public ActionResult Create(int id = 0)
         {
-            return View();
+            que que = new que();
+            if (id != 0)
+            {
+
+                que = db.Ques.Where(x => x.ID == id).FirstOrDefault<que>();
+               
+            }
+            return View(que);
         }
 
         // POST: ques/Create
@@ -52,10 +75,10 @@ namespace demoForm.Controllers
             {
                 db.Ques.Add(que);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("ViewAll");
             }
-
-            return View(que);
+            return RedirectToAction("Index");
+            // return Json(new { success = true, html = GlobalClass.RenderRazorViewToString(this, "ViewAll", GetAllEmployee()), message = "Submitted Successfully" }, JsonRequestBehavior.AllowGet);
         }
 
         // GET: ques/Edit/5

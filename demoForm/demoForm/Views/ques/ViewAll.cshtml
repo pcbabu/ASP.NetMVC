@@ -1,0 +1,60 @@
+﻿@model IEnumerable<demoForm.Models.que>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewAll</title>
+</head>
+<body>
+    <table>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th colspan=2>  @Html.DisplayFor(modelItem => item.Ques)</th>
+            </tr>
+            <tr>
+                <td><input type="radio" disabled="disabled" id="myRadio3"></td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Op1)
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio" disabled="disabled" id="myRadio3"></td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Op2)
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio" disabled="disabled" id="myRadio3"></td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Op3)
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio" disabled="disabled" id="myRadio3"></td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Op4)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+ 
+</body>
+</html>

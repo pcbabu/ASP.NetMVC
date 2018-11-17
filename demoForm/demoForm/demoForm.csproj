@@ -207,6 +207,8 @@
     <Content Include="Views\ques\Details.cshtml" />
     <Content Include="Views\ques\Edit.cshtml" />
     <Content Include="Views\ques\Index.cshtml" />
+    <Content Include="Views\ques\ViewAll.cshtml" />
+    <Content Include="Views\ques\createNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
